@@ -1,0 +1,1 @@
+window.TEXT_SEARCH_DATA={'posts':[{'title':"Bachelor Thesis",'url':"/2024/06/01/bachelor-thesis.html"},{'title':"AI Captioner: Командная разработка конвейера для обработки данных",'url':"/2025/04/26/ai-captioner.md%20"}]};
