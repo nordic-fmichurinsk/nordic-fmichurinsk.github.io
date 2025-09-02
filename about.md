@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: page
 title: "Обо мне"
 permalink: /about/
 author_profile: true # Эта строка включает боковую панель с вашим фото и ссылками

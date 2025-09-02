@@ -39,7 +39,7 @@ author:
   url       :
   avatar    : /assets/images/my-photo.jpg
   bio       : I am a bioinformatics student.
-  email     : potap4800@gmail.com
+  email     : "mailto:potap4800@gmail.com"
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -96,8 +96,8 @@ chart: # false (default), true
 
 ## => Paginate
 ##############################
-paginate: 8
-paginate_path: /page:num # don't change this unless for special need
+#paginate: 8
+#paginate_path: /page:num # don't change this unless for special need
 
 
 ## => Sources
@@ -202,11 +202,13 @@ exclude:
   - /vendor
 
 defaults:
+  # Этот блок применяет настройки ко всем вашим ПОСТАМ (ПРОЕКТАМ)
   - scope:
       path: ""
       type: posts
     values:
-      layout: article
+      layout: article        # <-- ПРАВИЛЬНО! Для постов используем 'article'
+      author_profile: true
       sharing: true
       license: true
       aside:
@@ -214,6 +216,14 @@ defaults:
       show_edit_on_github: true
       show_subscribe: true
       pageview: true
+
+  # Этот НОВЫЙ блок применяет настройки ко всем вашим СТРАНИЦАМ
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page           # <-- ПРАВИЛЬНО! Для страниц используем 'page'
+      author_profile: true
 
 
 ## => Plugins
@@ -223,3 +233,8 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+
+## => Main Navigation
+##############################
+navigation:
+  - main
